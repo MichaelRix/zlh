@@ -1,0 +1,33 @@
+/* Created on 20, Mar. 2015
+ * By Michael R.
+ */
+
+p.para::before {
+  content: '____';
+  color: transparent;
+}
+
+h1.hashed::before {
+  content: '#';
+  margin-right: 0.4em;
+}
+
+h2.hashed::before {
+  content: '##';
+  margin-right: 0.4em;
+}
+
+h3.hashed::before {
+  content: '###';
+  margin-right: 0.4em;
+}
+
+.half_width {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.full_width {
+  box-sizing: border-box;
+  width: 100%;
+}

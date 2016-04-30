@@ -1,0 +1,217 @@
+/* Created on 20, Mar. 2015
+ * By Michael R.
+ */
+
+/* Additional reset */
+
+/* This reloads basic elements */
+
+body {
+  font-family: 'Source Code Pro', monospace, 'Droid Sans Fallback', 'Microsoft Jhenghei', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.33em 0;
+}
+
+hr {
+  margin: 1em auto;
+  border: none;
+  border-top: 3px dashed #000;
+  max-width: 50%;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+span {
+  font-size: inherit;
+}
+
+a {
+  padding: 0 0.4em;
+  color: #000;
+  text-decoration: none;
+  transition: color, background .5s;
+}
+
+a:hover {
+  color: #fff;
+  background: #000;
+}
+
+blockquote {
+  margin: 0.5em 0;
+  border-left: 0.4em solid #000;
+  padding: 0.5em;
+}
+
+pre {
+  margin: 0.5em 0;
+}
+
+code {
+  margin: 0.5em 0;
+  font-family: 'Source Code Pro', 'Consolas', monospace;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+button {
+  outline: none;
+  border: 0.125em solid transparent;
+  margin: 0.375em 0;
+  padding: 0.5em 1em;
+  color: #fff;
+  background: #000;
+  transition: border, color, background .5s;
+}
+
+input[type='button']:hover,
+input[type='submit']:hover,
+input[type='reset']:hover,
+button:hover {
+  border: 0.125em solid #000;
+  color: #000;
+  background: #fff;
+}
+
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active,
+button:active {
+  text-decoration: underline;
+}
+
+input[type='text'],
+input[type='password'] {
+  outline: none;
+  border: 0.125em solid #000;
+  margin: 0.375em 0;
+  padding: 0.5em;
+  color: #000;
+  cursor: text;
+  background: #fff;
+  transition: border, color, background .5s;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  border: 0.125em solid transparent;
+  color: #fff;
+  background: #000;
+}
+
+textarea {
+  outline: none;
+  border: 0.125em solid #000;
+  margin: 0.375em 0;
+  padding: 0.5em;
+  color: #000;
+  cursor: text;
+  background: #fff;
+  transition: border, color, background .5s;
+}
+
+textarea:focus {
+  border: 0.125em solid transparent;
+  color: #fff;
+  background: #000;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+::-moz-placeholder {
+  color: #999;
+}
+
+:-moz-placeholder {
+  color: #999;
+}
+
+::-ms-input-placeholder {
+  color: #999;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  margin-left: 0.125em;
+  margin-right: 0.5em;
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  border: 0.125em solid #fff;
+  box-shadow: 0 0 0 0.125em #000;
+  vertical-align: middle;
+  transition: background .5s;
+}
+
+input[type='checkbox']:checked {
+  background: #000;
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  margin-left: 0.125em;
+  margin-right: 0.5em;
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  border: 0.125em solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.125em #000;
+  vertical-align: middle;
+  transition: background .5s;
+}
+
+input[type='radio']:checked {
+  background: #000;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  margin: 0.375em 0;
+  border: 0.125em solid #000;
+  padding: 0.5em;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  margin: 0.5em 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: '-';
+  margin-left: 1em;
+  margin-right: 0.6em;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 30px;
+}

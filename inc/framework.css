@@ -1,0 +1,132 @@
+/* Created on 20, Mar. 2015
+ * By Michael R.
+ */
+
+#nav {
+  display: block;
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.nav_first,
+.nav_item {
+  margin: 0;
+  display: inline-block;
+}
+
+.nav_first h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+.nav_first {
+  margin-right: -5px;
+}
+
+.nav_item {
+  margin-left: -0.375em;
+  margin-right: -0.375em;
+}
+
+.nav_first a {
+  background: #000;
+  font-size: 2em;
+  padding: 0.4em 0.4em;
+  color: #fff;
+  transition: color, background .5s;
+}
+
+.nav_first a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav_item a {
+  font-size: 2em;
+  padding: 0.4em;
+}
+
+#main {
+  margin: 2em 0;
+}
+
+.single {
+  margin: 4em 20%;
+  padding: 3%;
+  background: #000;
+  color: #fff;
+}
+
+.single a {
+  color: #fff;
+  padding: 0;
+}
+
+.single a:hover {
+  color: #000;
+  background: #fff;
+}
+
+.single p.text {
+  margin: 0;
+  font-size: 2em;
+}
+
+.single p.text span {
+  display: block;
+}
+
+.single p.info {
+  margin: 0;
+  margin-top: 1em;
+}
+
+.single p.info::before {
+  content: '著 ';
+}
+
+.single p.info span.time {
+  float: right;
+  text-transform: uppercase;
+}
+
+.single p.info span.time::before {
+  content: '時 ';
+}
+
+#pages {
+  text-align: center;
+}
+
+#pages span a {
+  font-size: 2em;
+}
+
+#pages span a.current {
+  text-decoration: underline;
+}
+
+.footer {
+  margin: 0;
+  margin-top: 2em;
+  padding-left: 1em;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  #nav {
+    font-size: 0.75em;
+  }
+
+  .single {
+    font-size: 0.8em;
+    margin: 4em 10%;
+  }
+
+  .single p.info {
+    margin-top: 2em;
+  }
+}
