@@ -62,8 +62,8 @@ class user {
 
   public static function get_hash($uname) {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
     sql::make($uname);
     $res = $sql->select([
       "select" => "hash",
@@ -90,8 +90,8 @@ class user {
 
   public static function get_info($uname) {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
     sql::make($uname);
     $res = $sql->select([
       "select" => "*",
@@ -105,8 +105,8 @@ class user {
 
   public static function update_info($uname, $info) {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
     if ($name || $desc !== "false") {
       $a = [];
       foreach ($info as $key => $val) {
@@ -130,9 +130,9 @@ class user {
 
   public static function update_pass($uname, $newpass) {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
-    if ($newpass == "") new err("New password not set", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
+    if ($newpass == "") new zerror("New password not set", "user.d");
     sql::make([&$uname, &$newpass]);
     return $sql->update([
       "update" => "hanauser",
@@ -143,8 +143,8 @@ class user {
 
   public static function get_avatar($uname, $size = 80, $rating = "g") {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
     sql::make($uname);
     $res = $sql->select([
       "select" => "mail",
@@ -164,8 +164,8 @@ class user {
 
   public static function count_koto($uname) {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
     sql::make($uname);
     $res = $sql->select([
       "select" => "index",
@@ -182,8 +182,8 @@ class user {
 
   public static function last_seen($uname) {
     global $sql;
-    if (!$sql) new err("Sql not initialized", "user.d");
-    if ($uname == "") new err("Username not valid", "user.d");
+    if (!$sql) new zerror("Sql not initialized", "user.d");
+    if ($uname == "") new zerror("Username not valid", "user.d");
     sql::make($uname);
     $res = $sql->select([
       "select" => "datetime",

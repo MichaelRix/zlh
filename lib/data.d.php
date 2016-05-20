@@ -25,7 +25,7 @@ class pagedata {
   public $sql;
 
   public function count($current) {
-    if (!$this->sql) new err("Sql not initialized", "data.d");
+    if (!$this->sql) new zerror("Sql not initialized", "data.d");
     $res = $this->sql->select([
       "select" => "index",
       "from" => "hanakoto",
@@ -50,7 +50,7 @@ class pagedata {
     }
   }
   public function fetch($pn) {
-    if (!$this->sql) new err("Sql not initialized", "data.d");
+    if (!$this->sql) new zerror("Sql not initialized", "data.d");
     $offset = ($pn - 1) * 30;
     $res = $this->sql->select([
       "select" => "",
