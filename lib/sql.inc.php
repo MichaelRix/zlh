@@ -71,7 +71,6 @@ class zerror {
      if ($orderby) $query .= " ORDER BY $orderby";
      if ($limit > 0) $query .= " LIMIT $limit";
      if ($offset > 0) $query .= " OFFSET $offset";
-     $query .= ";";
 
      return $this->sql->query($query);
    }
@@ -94,7 +93,6 @@ class zerror {
        $values = implode("', '", $values);
        $query .= " ('$values')";
      }
-     $query .= ";";
 
      echo $query;
      return $this->sql->query($query);
@@ -118,7 +116,6 @@ class zerror {
      $query .= " WHERE $where";
      if ($orderby) $query .= " ORDER BY $orderby";
      if ($limit) $query .= " LIMIT $limit";
-     $query .= ";";
 
      return $this->sql->query($query);
    }
@@ -133,7 +130,6 @@ class zerror {
      $query = "DELETE FROM $from WHERE $where";
      if ($orderby) $query .= " ORDER BY $orderby";
      if ($limit) $query .= " LIMIT $limit";
-     $query .= ";";
 
      return $this->sql->query($query);
    }
